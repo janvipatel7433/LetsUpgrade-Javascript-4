@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+<head>
+</head>
+<body>
+Enter any number:
+<input type="number" id="demo1">
+<button type="button" onclick="myFun()">Submit</button>
+<br>
+<p id="demo2"></p>
+<script>
+		
+		function myFun()
+		{
+			var x = document.getElementById("demo1").value;
+			x = Number(x);
+			if(x>=0 && x<=5000)
+			{
+				document.getElementById("demo2").innerHTML = "Total profit is : " +(x + (x*0.02));
+			}
+			else if(x>=5001 && x<=10000)
+			{
+				document.getElementById("demo2").innerHTML = "Total profit is : " + (x + (x*0.05));
+			}
+			else if(x>=10001 && x<=20000)
+			{
+				document.getElementById("demo2").innerHTML = "Total profit is : " + (x + (x*0.07));
+			}
+			else if(x>20001)
+			{
+				document.getElementById("demo2").innerHTML = "Total profit is : " + (x + (x*0.1));
+			}
+			else
+			{
+				document.getElementById("demo2").innerHTML = "enter valid number between 0 to 20000";
+			}
+		}
+</script>
+</body>
+</html>
